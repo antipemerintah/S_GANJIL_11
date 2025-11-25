@@ -1,2 +1,2 @@
-# S_GANJIL_11
+# S_GANJIL_1
 semester 1
