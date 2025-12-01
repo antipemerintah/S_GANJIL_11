@@ -24,8 +24,9 @@ $data = $pdo->query("SELECT * FROM gajiPNS")->fetchAll();
                 <th class="border p-2">Nama</th>
                 <th class="border p-2">Jabatan</th>
                 <th class="border p-2">Gaji Pokok</th>
-                <th class="border p-2">T. Rumah</th>
                 <th class="border p-2">T. Jabatan</th>
+                <th class="border p-2">T. Rumah</th>
+                <th class="border p-2">T. gelombang</th>
                 <th class="border p-2">Aksi</th>
             </tr>
         </thead>
@@ -38,6 +39,7 @@ $data = $pdo->query("SELECT * FROM gajiPNS")->fetchAll();
                 <td class="border p-2"><?= $row['gaji_pokok'] ?></td>
                 <td class="border p-2"><?= $row['tunjangan_rumah'] ?></td>
                 <td class="border p-2"><?= $row['tunjangan_jabatan'] ?></td>
+                <td class="border p-2"><?= $row['tunjangan_gelombang'] ?></td>
                 <td class="border p-2 space-x-1">
                     <a href="edit.php?id=<?= $row['id'] ?>" class="px-2 py-1 bg-yellow-500 text-white text-xs rounded">Edit</a>
                     <a href="hapus.php?id=<?= $row['id'] ?>" class="px-2 py-1 bg-red-600 text-white text-xs rounded"

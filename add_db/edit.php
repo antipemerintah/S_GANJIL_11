@@ -10,13 +10,14 @@ if (isset($_POST['update'])) {
     $gaji = $_POST['gaji_pokok'];
     $tr   = $_POST['tunjangan_rumah'];
     $tj   = $_POST['tunjangan_jabatan'];
-
+    $tg   = $_POST['tunjangan_gelombang'];
     $pdo->query("UPDATE gajiPNS SET
         nama_anggota='$nama',
         jabatan='$jab',
         gaji_pokok='$gaji',
         tunjangan_rumah='$tr',
-        tunjangan_jabatan='$tj'
+        tunjangan_jabatan='$tj',
+        tunjangan_gelombang='$tg'
         WHERE id=$id");
     header("Location: index.php");
 }
@@ -51,6 +52,10 @@ if (isset($_POST['update'])) {
         <div>
             <label class="block text-sm">Tunjangan Jabatan</label>
             <input type="number" name="tunjangan_jabatan" value="<?= $data['tunjangan_jabatan'] ?>" class="border w-full px-2 py-1 text-sm">
+        </div>
+        <div>
+            <label class="block text-sm">Tunjangan gelombang</label>
+            <input type="number" name="tunjangan_gelombang" value="<?= $data['tunjangan_gelombang'] ?>" class="border w-full px-2 py-1 text-sm">
         </div>
         <div class="mt-3 flex gap-2">
             <button name="update" class="bg-blue-600 text-white text-sm px-3 py-1 rounded">Update</button>
